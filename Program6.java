@@ -107,41 +107,11 @@ class DBMS
 
         System.out.println("Number of records in the table : "+iCnt);
     }
-
-    //select Sum(Marks) from student;
-    public void SelectSum()
-    {
-        node temp = first;
-        int iSum = 0;
-
-        while(temp != null)
-        {
-            iSum = iSum + temp.Marks;
-            temp = temp.next;
-        }
-
-        System.out.println("Summation of Marks column is : "+iSum);
-    }
-
-    //select Avg(Marks) from student;
-    public void SelectAvg()
-    {
-        node temp = first;
-        int iSum = 0;
-        int iCnt = 0;
-
-        while(temp != null)
-        {
-            iSum = iSum + temp.Marks;
-            temp = temp.next;
-            iCnt++;
-        }
-
-        System.out.println("Average of Marks column is : "+(float)((float)iSum/(float)iCnt));
-    }
 }
 
-class Program425
+
+
+class Program6
 {
     public static void main(String Arg[])
     {
@@ -158,10 +128,6 @@ class Program425
         obj.SelectStarFromWhereCity("Pune");
 
         obj.SelectCount();
-
-        obj.SelectSum();
-
-        obj.SelectAvg();
     }
 }
 
@@ -172,7 +138,5 @@ Supported Queries
 2 : select * from student;
 3 : slect *  from student where City = 'Pune';
 4 : select Count(Marks) from student;
-5 : select Sum(Marks) from student;
-6 : select Avg(Marks) from student;
 
 */

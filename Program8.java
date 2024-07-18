@@ -122,9 +122,26 @@ class DBMS
 
         System.out.println("Summation of Marks column is : "+iSum);
     }
+
+    //select Avg(Marks) from student;
+    public void SelectAvg()
+    {
+        node temp = first;
+        int iSum = 0;
+        int iCnt = 0;
+
+        while(temp != null)
+        {
+            iSum = iSum + temp.Marks;
+            temp = temp.next;
+            iCnt++;
+        }
+
+        System.out.println("Average of Marks column is : "+(float)((float)iSum/(float)iCnt));
+    }
 }
 
-class Program424
+class Program8
 {
     public static void main(String Arg[])
     {
@@ -143,6 +160,8 @@ class Program424
         obj.SelectCount();
 
         obj.SelectSum();
+
+        obj.SelectAvg();
     }
 }
 
@@ -153,6 +172,7 @@ Supported Queries
 2 : select * from student;
 3 : slect *  from student where City = 'Pune';
 4 : select Count(Marks) from student;
-5: select Sum(Marks) from student;
+5 : select Sum(Marks) from student;
+6 : select Avg(Marks) from student;
 
 */

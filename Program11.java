@@ -205,7 +205,7 @@ class DBMS
 
 }
 
-class Program428
+class Program11
 {
     public static void main(String Arg[])
     {

@@ -31,7 +31,6 @@ class DBMS
     }
 
     // InsertLast
-    // insert into table student values(1,'Amit','Pune',89);
     public void InsertIntoTable(int Rno, String Name, String City, int Marks)
     {
         node newn = new node(Rno,Name,City,Marks);
@@ -52,26 +51,9 @@ class DBMS
         }
         System.out.println("One record gets inserted succesfully...");
     }
-
-    // Display
-    // select * from student
-    public void SelectStarFrom()
-    {
-        System.out.println("Data from the student table is : ");
-
-        node temp = first;
-
-        System.out.println("--------------------------------------------------------------");
-        while(temp != null)
-        {
-            System.out.println(temp.Rno+"\t"+temp.Name+"\t"+temp.City+"\t"+temp.Marks);
-            temp = temp.next;
-        }
-        System.out.println("--------------------------------------------------------------");
-    }
 }
 
-class Program420
+class Program2
 {
     public static void main(String Arg[])
     {
@@ -82,6 +64,5 @@ class Program420
         obj.InsertIntoTable(3,"Rahul","Satara",80);
         obj.InsertIntoTable(4,"Neha","Pune",78);
 
-        obj.SelectStarFrom();
     }
 }

@@ -162,32 +162,9 @@ class DBMS
 
         System.out.println("Maximum of Marks column is : "+iMax);
     }
-
-    //select Min(Marks) from student;
-    public void SelectMin()
-    {
-        node temp = first;
-        int iMin = 0;
-
-        if(temp != null)
-        {
-            iMin = temp.Marks;
-        }
-
-        while(temp != null)
-        {
-            if(temp.Marks < iMin)
-            {
-                iMin = temp.Marks;
-            }
-            temp = temp.next;
-        }
-
-        System.out.println("Minimum of Marks column is : "+iMin);
-    }
 }
 
-class Program427
+class Program9
 {
     public static void main(String Arg[])
     {
@@ -210,9 +187,6 @@ class Program427
         obj.SelectAvg();
 
         obj.SelectMax();
-
-        obj.SelectMin();
-
     }
 }
 

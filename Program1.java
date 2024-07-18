@@ -15,7 +15,7 @@ class DBMS
     public node first;
 }
 
-class Program418
+class Program1
 {
     public static void main(String Arg[])
     {

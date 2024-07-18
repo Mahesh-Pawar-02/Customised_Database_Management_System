@@ -92,79 +92,9 @@ class DBMS
         }
         System.out.println("--------------------------------------------------------------");
     }
-
-    //select Count(Marks) from student;
-    public void SelectCount()
-    {
-        node temp = first;
-        int iCnt = 0;
-
-        while(temp != null)
-        {
-            temp = temp.next;
-            iCnt++;
-        }
-
-        System.out.println("Number of records in the table : "+iCnt);
-    }
-
-    //select Sum(Marks) from student;
-    public void SelectSum()
-    {
-        node temp = first;
-        int iSum = 0;
-
-        while(temp != null)
-        {
-            iSum = iSum + temp.Marks;
-            temp = temp.next;
-        }
-
-        System.out.println("Summation of Marks column is : "+iSum);
-    }
-
-    //select Avg(Marks) from student;
-    public void SelectAvg()
-    {
-        node temp = first;
-        int iSum = 0;
-        int iCnt = 0;
-
-        while(temp != null)
-        {
-            iSum = iSum + temp.Marks;
-            temp = temp.next;
-            iCnt++;
-        }
-
-        System.out.println("Average of Marks column is : "+(float)((float)iSum/(float)iCnt));
-    }
-
-    //select Max(Marks) from student;
-    public void SelectMax()
-    {
-        node temp = first;
-        int iMax = 0;
-
-        if(temp != null)
-        {
-            iMax = temp.Marks;
-        }
-
-        while(temp != null)
-        {
-            if(temp.Marks > iMax)
-            {
-                iMax = temp.Marks;
-            }
-            temp = temp.next;
-        }
-
-        System.out.println("Maximum of Marks column is : "+iMax);
-    }
 }
 
-class Program426
+class Program5
 {
     public static void main(String Arg[])
     {
@@ -179,14 +109,6 @@ class Program426
         obj.SelectStarFrom();
 
         obj.SelectStarFromWhereCity("Pune");
-
-        obj.SelectCount();
-
-        obj.SelectSum();
-
-        obj.SelectAvg();
-
-        obj.SelectMax();
     }
 }
 
@@ -196,10 +118,5 @@ Supported Queries
 1 : insert into student values('Amit','Pune',78);
 2 : select * from student;
 3 : slect *  from student where City = 'Pune';
-4 : select Count(Marks) from student;
-5 : select Sum(Marks) from student;
-6 : select Avg(Marks) from student;
-7 : select Max(Marks) from student;
-8 : select Min(Marks) from student;
 
 */

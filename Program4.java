@@ -73,28 +73,9 @@ class DBMS
         }
         System.out.println("--------------------------------------------------------------");
     }
-
-    // select * from student where city = '_____';
-    public void SelectStarFromWhereCity(String str)
-    {
-        System.out.println("Data from the student table where city is : "+str);
-
-        node temp = first;
-
-        System.out.println("--------------------------------------------------------------");
-        while(temp != null)
-        {
-            if(str.equals(temp.City))
-            {
-                System.out.println(temp.Rno+"\t"+temp.Name+"\t"+temp.City+"\t"+temp.Marks);
-            }
-            temp = temp.next;
-        }
-        System.out.println("--------------------------------------------------------------");
-    }
 }
 
-class Program422
+class Program4
 {
     public static void main(String Arg[])
     {
@@ -102,21 +83,9 @@ class Program422
 
         obj.InsertIntoTable("Amit","Pune",89);
         obj.InsertIntoTable("Pooja","Mumbai",95);
-        obj.InsertIntoTable("Gauri","Pune",90);
         obj.InsertIntoTable("Rahul","Satara",80);
         obj.InsertIntoTable("Neha","Pune",78);
 
         obj.SelectStarFrom();
-
-        obj.SelectStarFromWhereCity("Pune");
     }
 }
-
-/*
-Supported Queries
-
-1 : insert into student values('Amit','Pune',78);
-2 : select * from student;
-3 : slect *  from student where City = 'Pune';
-
-*/

@@ -252,7 +252,7 @@ class DBMS
 
 }
 
-class Program431
+class Program13
 {
     public static void main(String Arg[])
     {
@@ -289,9 +289,6 @@ class Program431
 
         obj.SelectStarFrom();
 
-        obj.InsertIntoTable("Rukmini","Kolhapur",77);
-
-        obj.SelectStarFrom();
     }
 }
 

@@ -2,8 +2,6 @@
 
 class node
 {
-    private static int Counter = 1;
-
     public int Rno;
     public String Name;
     public String City;
@@ -11,11 +9,9 @@ class node
 
     public node next;
 
-    public node(String B, String C, int D)
+    public node(int A, String B, String C, int D)
     {
-        Rno = Counter;
-        Counter++;
-
+        Rno = A;
         Name = B;
         City = C;
         Marks = D;
@@ -36,9 +32,9 @@ class DBMS
 
     // InsertLast
     // insert into table student values(1,'Amit','Pune',89);
-    public void InsertIntoTable(String Name, String City, int Marks)
+    public void InsertIntoTable(int Rno, String Name, String City, int Marks)
     {
-        node newn = new node(Name,City,Marks);
+        node newn = new node(Rno,Name,City,Marks);
 
         if(first == null)
         {
@@ -75,16 +71,16 @@ class DBMS
     }
 }
 
-class Program421
+class Program3
 {
     public static void main(String Arg[])
     {
         DBMS obj = new DBMS();
 
-        obj.InsertIntoTable("Amit","Pune",89);
-        obj.InsertIntoTable("Pooja","Mumbai",95);
-        obj.InsertIntoTable("Rahul","Satara",80);
-        obj.InsertIntoTable("Neha","Pune",78);
+        obj.InsertIntoTable(1,"Amit","Pune",89);
+        obj.InsertIntoTable(2,"Pooja","Mumbai",95);
+        obj.InsertIntoTable(3,"Rahul","Satara",80);
+        obj.InsertIntoTable(4,"Neha","Pune",78);
 
         obj.SelectStarFrom();
     }

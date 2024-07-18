@@ -221,9 +221,38 @@ class DBMS
         System.out.println("Record gets updated...");
     }
 
+    //11 : delete from student where Rno = ___;
+    public void DeleteFrom(int no)
+    {
+        node temp = first;
+
+        // If LL is empty
+        if(temp == null)
+        {
+            return;
+        }
+
+        // if first node is the targated node
+        if(temp.Rno == no)
+        {
+            first = first.next;
+            return;
+        }
+
+        while(temp.next != null)
+        {
+            if(temp.next.Rno == no)
+            {
+                temp.next = temp.next.next;
+                break;
+            }
+            temp = temp.next;
+        }
+    }
+
 }
 
-class Program429
+class Program13
 {
     public static void main(String Arg[])
     {
@@ -255,6 +284,14 @@ class Program429
         obj.UpdateCity(3,"Nashik");
 
         obj.SelectStarFrom();
+
+        obj.DeleteFrom(5);
+
+        obj.SelectStarFrom();
+
+        obj.InsertIntoTable("Rukmini","Kolhapur",77);
+
+        obj.SelectStarFrom();
     }
 }
 
@@ -271,5 +308,6 @@ Supported Queries
 8 : select Min(Marks) from student;
 9 : select * from student where name = "_____";
 10 : update student set City = "____" where Rno = ____;
+11 : delete from student where Rno = ___;
 
 */
